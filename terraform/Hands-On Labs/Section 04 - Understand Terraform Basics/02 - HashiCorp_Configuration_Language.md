@@ -16,15 +16,34 @@ resource "aws_instance" "web_server" { # BLOCK
   instance_type = var.instance_type # Argument with value as expression (Variable value replaced 11 }
 ```
 
-Terraform Code Configuration block types include:
-- Terraform Settings Block
-- Terraform Provider Block
-- Terraform Resource Block
-- Terraform Data Block
-- Terraform Input Variables Block
-- Terraform Local Variables Block
-- Terraform Output Values Block
-- Terraform Modules Block
+when you're writing code with Terraform, you organize your instructions into different blocks. Here's a brief explanation of each type:
+
+1. **Terraform Settings Block:**
+   - This is where you configure settings for your entire Terraform configuration, such as the required Terraform version.
+
+2. **Terraform Provider Block:**
+   - Here, you define the cloud or infrastructure provider you'll be working with, like AWS, Azure, or Google Cloud. It includes authentication details and other provider-specific settings.
+
+3. **Terraform Resource Block:**
+   - This block is used to define and configure a specific resource provided by the chosen provider. For example, it could be an AWS EC2 instance or an Azure storage account.
+
+4. **Terraform Data Block:**
+   - Data blocks allow you to fetch and use data from external sources, like information about an existing resource that you want to use in your configuration.
+
+5. **Terraform Input Variables Block:**
+   - Input variable blocks are where you define parameters that users can input when running your Terraform code. These variables make your code more flexible and reusable.
+
+6. **Terraform Local Variables Block:**
+   - Local variables are like temporary placeholders within your Terraform configuration. You can use them to simplify complex expressions or reuse values in multiple places.
+
+7. **Terraform Output Values Block:**
+   - Output blocks allow you to expose certain values from your Terraform configuration. These values can be useful for other parts of your infrastructure or external processes.
+
+8. **Terraform Modules Block:**
+   - Modules are a way to organize and reuse parts of your Terraform configuration. They encapsulate a set of resources and can be used across multiple projects, promoting code reusability.
+
+In summary, these different block types in Terraform help you structure your code, manage configurations for different parts of your infrastructure, and make your code more adaptable and reusable. Each block type serves a specific purpose in defining, organizing, and managing your infrastructure as code.
+
 
 We will be utilizing Terraform Provider, Terraform Resource, Data and Input Variables Blocks in this lab. This course
 will go through each of these configuration blocks in more detail throughout the course.
