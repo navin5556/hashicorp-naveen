@@ -148,6 +148,18 @@ resource "aws_instance" "ubuntu_server" {
 
 You will notice that we are referencing other resource blocks via Terraform interpolation syntax to associate the security group, keypair and private key for the connection to our instance. The value of `self` refers to the resource defined by the current block. So `self.public_ip` refers to the public IP address of our `aws_instance.web`.
 
+Connection Details:
+The connection block specifies details for connecting to the instance, including the username ("ubuntu"), private key, and the host's public IP address.
+
+The lifecycle block in Terraform is used to configure various aspects of how resources are managed over their lifecycle, especially in terms of updates, replacements, and deletions. In the provided code:
+
+hcl
+Copy code
+lifecycle {
+  ignore_changes = [security_groups]
+}
+This block is telling Terraform to ignore changes to the security_groups attribute when determining whether the resource needs to be replaced. In other words, if someone manually changes the security groups associated with this EC2 instance outside of Terraform (e.g., in the AWS Management Console), Terraform won't try to recreate the EC2 instance just because of that change. This is useful to prevent unnecessary disruptions or recreations when certain attributes can be managed separately.
+
 ## Task 4: Use the `local-exec` provisioner to change permissions on your local SSH Key
 
 The `local-exec` provisioner invokes a local executable after a resource is created. We will utilize a `local-exec` provisioner to make sure our private key is permissioned correctly. This invokes a process on the machine running Terraform, not on the resource.
