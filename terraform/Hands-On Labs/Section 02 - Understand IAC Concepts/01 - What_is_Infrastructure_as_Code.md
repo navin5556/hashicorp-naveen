@@ -2,11 +2,21 @@
 
 ## What is Infrastructure as Code
 
-Infrastructure as Code is essentially a hub that can be used for collaboration across the IT organization to improve infrastructure deployments, increase our ability to scale quickly, and improve the application development process. Infrastructure as Code allows us to do all this consistently and proficiently. By using Infrastructure as Code for both our on-premises infrastructure and the public cloud, our organization can provide dynamic infrastructure to both our internal team members and ensure our customers have an excellent experience.
+Infrastructure as Code (IaC) is like a blueprint or a set of instructions for managing and deploying IT infrastructure. Instead of manually setting up servers, networks, and other components, IaC allows us to define and automate these processes using code. It's like using a script to create and manage the necessary infrastructure.
 
 ## Benefits of IaC
 
-While there are many benefits of Infrastructure as Code, a few key benefits include simplifying cloud adoption, allowing us to adopt cloud-based services and offerings to improve our capabilities quickly. Infrastructure as Code allows us to remove many of the manual steps required today for infrastructure requests, giving us the ability to automate approved requests without worrying about tickets sitting in a queue. We can also use Infrastructure as Code to provide capacity-on-demand by offering a library of services for our developers. We can publish a self-service capability where developers and application owners can be empowered to request and provision infrastructure that better matches their requirements. Again, all of this is possible while driving standardization and consistency throughout the organization, which can drive efficiencies and reduce errors or deviations from established norms.
+The key benefits of Infrastructure as Code include:
+
+1. Simplifying Cloud Adoption: IaC makes it easier to transition to cloud services, enabling organizations to quickly enhance their capabilities by utilizing cloud-based resources.
+
+2. Automation of Infrastructure Requests: It eliminates the need for many manual steps in requesting and setting up infrastructure. Approved requests can be automated, reducing the time and effort required to fulfill them.
+
+3. Capacity-on-Demand: IaC enables the creation of a library of pre-defined services that developers can easily access and provision as needed. This self-service capability allows for on-demand capacity, matching infrastructure to specific project requirements.
+
+4. Standardization and Consistency: By using IaC, organizations can enforce consistent configurations and standards across their infrastructure. This helps in reducing errors and deviations from established norms, ensuring reliability and efficiency.
+
+In simple terms, Infrastructure as Code is like having a recipe for building and managing your IT infrastructure. It not only makes things faster and more efficient but also ensures that everything is done in a standardized and consistent way.
 
 ## Example of IaC
 
