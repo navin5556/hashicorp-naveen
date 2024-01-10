@@ -2,7 +2,7 @@
 
 Deciding what infrastructure to include is the one of the most challenging aspects about creating a new Terraform module.
 
-Modules should be opinionated and designed to do one thing well. If a module's function or purpose is hard to explain, the module is probably too complex. When initially scoping your module, aim for small and simple to start.
+Make sure modules have a clear purpose and do their job well. If a module's role is difficult to explain, it's likely too complicated. When you first plan your module, try to keep it small and straightforward.
 
 - Task 1: Resources within Child Modules
 - Task 2: Scoping Module Inputs and Outputs
@@ -11,7 +11,7 @@ Modules should be opinionated and designed to do one thing well. If a module's f
 
 ## Task 1: Resources within Child Modules
 
-In principle any combination of resources and other constructs can be factored out into a module, but over-using modules can make your overall Terraform configuration harder to understand and maintain, so we recommend moderation. A good module should raise the level of abstraction by describing a new concept in your architecture that is constructed from resource types offered by providers.
+Basically, you can organize different things in Terraform into modules. However, using modules too much can make your overall setup more complicated and challenging to manage. It's best to use modules wisely. A helpful module should simplify things by introducing a new idea in your architecture made up of resource types provided by Terraform.
 
 Let's take a closer look at the auto scaling group module that we are calling to further understand which resources are used to construct the module. Inside our `main.tf` we can see that the autoscaling module we are calling is being sourced from the [Terraform Public Module registry](https://registry.terraform.io/modules/terraform-aws-modules/autoscaling/aws/latest), and we are passing 10 inputs into the module.
 
